@@ -1,0 +1,6 @@
+class Item < ApplicationRecord
+	belongs_to :user
+	belongs_to :category
+	has_many :comments
+	has_many :favorites
+end
