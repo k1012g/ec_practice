@@ -5,13 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-if Rails.env == "development"
-  10.times do |i|
-    User.create!(name: "Test#{i + 1}", email: "test#{i + 1}@gmail.com", password: "123456", password_confirmation: "123456")
-  end
-end
 
-# A
+# if Rails.env == "development"
+#   10.times do |i|
+#     User.create!(name: "Test#{i + 1}", email: "test#{i + 1}@gmail.com", password: "123456", password_confirmation: "123456")
+#   end
+# end
+
+
+# Category.create(name: "トップス")
+# Category.create(name: "アウター")
+# Category.create(name: "ワンピース")
+# Category.create(name: "スカート")
+# Category.create(name: "パンツ")
+# Category.create(name: "セットアップ")
+# Category.create(name: "フォーマル")
+# Category.create(name: "スニーカー")
+# Category.create(name: "シューズ")
+# Category.create(name: "ブーツ")
+# Category.create(name: "帽子")
+# Category.create(name: "アクセサリー")
+# Category.create(name: "バッグ")
+
+
+# # A
 Brand.create(name: "A BATHING APE")
 Brand.create(name: "A.P.C")
 Brand.create(name: "Acne Studios")
@@ -77,7 +94,7 @@ Brand.create(name: "ayumi.mitsukane")
 Brand.create(name: "AYURA")
 Brand.create(name: "AZUL by moussy")
 
-# B
+# # B
 Brand.create(name: "B.A")
 Brand.create(name: "Baccarat")
 Brand.create(name: "BALENCIAGA")
