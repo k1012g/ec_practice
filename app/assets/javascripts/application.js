@@ -16,3 +16,16 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+$(document).on('turbolinks:load', function() {
+	$('#file').change(function(e){
+		let file = e.target.files[0],
+			reader = new FileReader();
+
+		reader.onload = (function(file){
+			return function(e){
+				$("#img").attr("src", e.target.result);
+			};
+		})(file);
+		reader.readAsDataURL(file);
+	});
+});

@@ -1,0 +1,16 @@
+<h1>Myページ</h1>
+<strong>
+	ユーザーID : <%= @user.id %>
+</strong>
+<br>
+<strong>
+	ユーザーネーム : <%= @user.name %>
+</strong>
+<br>
+<strong>
+	プロフィール画像
+	<br>
+	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300', class: "user_image" %>
+</strong>
+<br>
+<%= link_to "編集する", edit_user_path(current_user) %>

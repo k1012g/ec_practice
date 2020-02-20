@@ -1,0 +1,25 @@
+<h1>編集ページ</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+	<strong>ユーザーネーム</strong><br>
+	<%= f.text_field :name %>
+	<br>
+
+	<strong>自己紹介</strong><br>
+	<%= f.text_area :introduction %>
+	<br>
+
+	<strong>プロフィール画像編集</strong>
+	<br>
+	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300', id: "img" %>
+	<%= f.attachment_field :profile_image, id: "file" %>
+	<br>
+
+	<% if @user.profile_image.present? %>
+		画像を削除する
+		<input type="checkbox" name="delete" value="yes">
+		<br>
+	<% end %>
+
+	<%= f.submit "更新" %>
+<% end %>
+<%= link_to "Myページへ戻る", user_path(current_user) %>

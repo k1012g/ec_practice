@@ -1,5 +1,15 @@
 <header class="header">
-	<%= link_to "Home", root_path %>
-	<%= link_to "Sign up", new_user_registration_path %>
-	<%= link_to "Sign in", new_user_session_path %>
+	<% if signed_in? %>
+		<%= link_to "Home", root_path %>
+		<%= link_to "Sign out", destroy_user_session_path, data: { confirm: "Sign out ?" }, method: :delete %>
+	<% else %>
+		<%= link_to "Home", root_path %>
+		<%= link_to "Sign up", new_user_registration_path %>
+		<%= link_to "Sign in", new_user_session_path %>
+	<% end %>
 </header>
+<% if signed_in? %>
+	<strong>
+		Signed in as <%= current_user.name %>
+	</strong>
+<% end %>
