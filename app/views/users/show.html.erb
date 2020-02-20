@@ -7,10 +7,14 @@
 	ユーザーネーム : <%= @user.name %>
 </strong>
 <br>
+<strong>自己紹介</strong><br>
+<%= @user.introduction %>
+<br>
 <strong>
 	プロフィール画像
 	<br>
 	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300', class: "user_image" %>
 </strong>
 <br>
-<%= link_to "編集する", edit_user_path(current_user) %>
+<%= link_to "編集する", edit_user_path(current_user) %><br>
+<%= link_to "出品する", new_item_path %>
