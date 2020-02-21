@@ -1,34 +1,5 @@
 <h1>出品ページ</h1>
 <%= form_with(model: @item, local: true) do |f| %>
-
-	<strong>商品画像</strong><br>
-	<%= attachment_image_tag @item, :item_image, :fill, 300, 300, fallback: "item_no_image.png", size:'300x300', id: "img" %>
-	<%= f.attachment_field :item_image, id: "file" %>
-	<br>
-
-	<strong>商品カテゴリー</strong><br>
-	<%= f.collection_select(:category_id, Category.all, :id, :name) %>
-	<br>
-
-	<strong>ブランド</strong><br>
-	<%= f.collection_select(:brand_id, Brand.all, :id, :name) %>
-	<br>
-
-	<strong>商品名</strong><br>
-	<%= f.text_field :title %>
-	<br>
-
-	<strong>商品説明</strong><br>
-	<%= f.text_area :body %>
-	<br>
-
-	<strong>サイズ</strong><br>
-	<%= f.text_field :size %>
-	<br>
-
-	<strong>商品価格</strong><br>
-	<%= f.text_field :price %>
-	<br>
-
+	<%= render 'items/form', item: @item, f: f %>
 	<%= f.submit "出品する" %>
 <% end %>

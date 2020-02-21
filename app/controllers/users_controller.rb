@@ -12,13 +12,13 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		@user = User.find(params[:id])
+		user = User.find(params[:id])
 		if params[:delete] == "yes"
-			@user.profile_image = nil
+			user.profile_image = nil
 		end
 
-		if @user.update(user_params)
-			redirect_to user_path(@user)
+		if user.update(user_params)
+			redirect_to user_path(user.id)
 		end
 	end
 
