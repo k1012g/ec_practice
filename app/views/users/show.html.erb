@@ -13,8 +13,14 @@
 <strong>
 	プロフィール画像
 	<br>
-	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300', class: "user_image" %>
+	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300'%>
 </strong>
 <br>
 <%= link_to "編集する", edit_user_path(current_user) %><br>
 <%= link_to "出品する", new_item_path %>
+<br>
+<br>
+<h1>出品商品一覧</h1>
+<% @user.items.each do |item| %>
+	<%= render 'items/index', item: item %>
+<% end %>

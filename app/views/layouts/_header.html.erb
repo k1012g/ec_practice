@@ -1,8 +1,9 @@
 <header class="header">
 	<% if signed_in? %>
-		<%= link_to "Home", root_path %>
+		<%= link_to "Top", root_path %>
 		<%= link_to "Myページ", user_path(current_user) %>
-		<%= link_to "Sign out", destroy_user_session_path, data: { confirm: "Sign out ?" }, method: :delete %>
+		<%= link_to "商品一覧", items_path %>
+		<%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "Sign out ?" }, method: :delete %>
 	<% else %>
 		<%= link_to "Home", root_path %>
 		<%= link_to "Sign up", new_user_registration_path %>
@@ -11,6 +12,6 @@
 </header>
 <% if signed_in? %>
 	<strong>
-		Signed in as <%= current_user.name %>
+		Signed in as <%= current_user.name %><br>
 	</strong>
 <% end %>
