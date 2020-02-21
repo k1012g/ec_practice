@@ -25,14 +25,34 @@
 }
 
 .header{
-	background-color: lightgrey;
+	background-color: #F9F9F9;
 	border: 1px solid black;
-	height: 58px;
 	width: 100%;
+	.header-title{
+		font-size: 30px;
+		line-height: 60px;
+		padding-left: 10px;
+	}
+	a{
+		color: #090909;
+		&:hover{
+			opacity: 0.9;
+			text-decoration: none;
+		}
+	}
+	div{
+		float: right;
+		height: 60px;
+		line-height: 60px;
+		a{
+			font-size: 20px;
+			padding: 0 10px;
+		}
+	}
 }
 
 .footer{
-	background-color: lightgrey;
+	background-color: #F9F9F9;
 	border: 1px solid black;
 	line-height: 40px;
 	height: 40px;

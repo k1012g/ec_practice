@@ -1,13 +1,22 @@
 <header class="header">
+	<%= link_to root_path do %>
+		<strong class="header-title">Fashion Flee</strong>
+	<% end %>
 	<% if signed_in? %>
-		<%= link_to "Top", root_path %>
-		<%= link_to "Myページ", user_path(current_user) %>
-		<%= link_to "商品一覧", items_path %>
-		<%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "Sign out ?" }, method: :delete %>
+		<div>
+			<strong>
+				<%= link_to "Myページ", user_path(current_user) %>
+				<%= link_to "商品一覧", items_path %>
+				<%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "Sign out ?" }, method: :delete %>
+			</strong>
+		</div>
 	<% else %>
-		<%= link_to "Home", root_path %>
-		<%= link_to "Sign up", new_user_registration_path %>
-		<%= link_to "Sign in", new_user_session_path %>
+		<div>
+			<strong>
+				<%= link_to "会員登録", new_user_registration_path %>
+				<%= link_to "ログイン", new_user_session_path %>
+			</strong>
+		</div>
 	<% end %>
 </header>
 <% if signed_in? %>
