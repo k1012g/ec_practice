@@ -138,3 +138,112 @@ Brand.create(name: "BURBERRY")
 Brand.create(name: "BUTTERO")
 Brand.create(name: "BVLGARI")
 Brand.create(name: "BYREDO")
+
+
+# C
+Brand.create(name: "Calvin Klein")
+Brand.create(name: "CAMPER")
+Brand.create(name: "CANADA GOOSE")
+Brand.create(name: "CANALI")
+Brand.create(name: "Candy Stripper")
+Brand.create(name: "CANMAKE")
+Brand.create(name: "CAROL CHRISTIAN POELL")
+Brand.create(name: "Cartier")
+Brand.create(name: "CARVEN")
+Brand.create(name: "Cath Kidston")
+Brand.create(name: "CEDRIC CHARLIER")
+Brand.create(name: "CELINE")
+Brand.create(name: "Celvoke")
+Brand.create(name: "Champion")
+Brand.create(name: "CHAN LUU")
+Brand.create(name: "CHANEL")
+Brand.create(name: "CHAUMET")
+Brand.create(name: "Children of the discordance")
+Brand.create(name: "Chloe")
+Brand.create(name: "Chopard")
+Brand.create(name: "Christian Louboutin")
+Brand.create(name: "CHRISTOPHE LEMAIRE")
+Brand.create(name: "Christopher Kane")
+Brand.create(name: "CHROME HEARTS")
+Brand.create(name: "Chun Shui Tang")
+Brand.create(name: "Church's")
+Brand.create(name: "CINOH")
+Brand.create(name: "CINQUANTA")
+Brand.create(name: "CITIZEN")
+Brand.create(name: "CIVILIZED")
+Brand.create(name: "CLANE")
+Brand.create(name: "CLARINS")
+Brand.create(name: "CLAUDIA LI")
+Brand.create(name: "cle de peau Beaute")
+Brand.create(name: "CLINIQUE")
+Brand.create(name: "CMMN SWDN")
+Brand.create(name: "COACH")
+Brand.create(name: "Coci la elle")
+Brand.create(name: "coeur femme")
+Brand.create(name: "COFFRET D'OR")
+Brand.create(name: "Columbia")
+Brand.create(name: "COMESANDGOES")
+Brand.create(name: "COMME des GARCONS")
+Brand.create(name: "COMOLI")
+Brand.create(name: "CONVERSE")
+Brand.create(name: "Coohem")
+Brand.create(name: "COS")
+Brand.create(name: "CoSTUME NATIONAL")
+Brand.create(name: "COVERMARK")
+Brand.create(name: "Credor")
+Brand.create(name: "CROCKETT&JONES")
+Brand.create(name: "Cruciani")
+Brand.create(name: "CULLNI")
+Brand.create(name: "CUNE")
+Brand.create(name: "CYCLAS")
+
+
+
+# D
+Brand.create(name: "")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
