@@ -16,9 +16,16 @@
 	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300'%>
 </strong>
 <br>
-<%= link_to "編集する", edit_user_path(current_user) %><br>
-<%= link_to "出品する", new_item_path %>
-<br>
+<% if @user == current_user %>
+	<%= link_to "編集する", edit_user_path(current_user) %>
+	<br>
+	<%= link_to "出品する", new_item_path %>
+	<br>
+<% else %>
+	<div id="follow_<%= @user.id %>">
+		<%= render 'users/follow', user: @user %>
+	</div>
+<% end %>
 <br>
 <h1>出品商品一覧</h1>
 <% @user.items.each do |item| %>
