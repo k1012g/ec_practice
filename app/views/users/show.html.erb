@@ -1,33 +1,18 @@
-<h1>Myページ</h1>
-<strong>
-	ユーザーID : <%= @user.id %>
-</strong>
-<br>
-<strong>
-	ユーザーネーム : <%= @user.name %>
-</strong>
-<br>
-<strong>自己紹介</strong><br>
-<%= @user.introduction %>
-<br>
-<strong>
-	プロフィール画像
-	<br>
-	<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300'%>
-</strong>
-<br>
-<% if @user == current_user %>
-	<%= link_to "編集する", edit_user_path(current_user) %>
-	<br>
-	<%= link_to "出品する", new_item_path %>
-	<br>
-<% else %>
-	<div id="follow_<%= @user.id %>">
-		<%= render 'users/follow', user: @user %>
-	</div>
-<% end %>
-<br>
-<h1>出品商品一覧</h1>
-<% @user.items.each do |item| %>
-	<%= render 'items/index', item: item %>
-<% end %>
+<main class="mypage">
+	<h1 class="text-center">
+		My page
+	</h1>
+	<section class="profile">
+		<span>
+			<%= @user.name %>
+			<br>
+			<%= @user.introduction %>
+			<br>
+			<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.png", size:'300x300' %>
+		</span>
+	</section>
+	<h1>出品商品一覧</h1>
+	<% @user.items.each do |item| %>
+		<%= render 'items/index', item: item %>
+	<% end %>
+</main>
