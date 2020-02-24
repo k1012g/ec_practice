@@ -1,18 +1,29 @@
-<main class="mypage">
+<main class="mypage clearfix">
 	<h1 class="text-center">
 		My page
 	</h1>
-	<section class="profile">
+	<section class="user_profile">
 		<span>
-			<%= @user.name %>
+			<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.jpg", size:'300x300', class: "user_image" %>
 			<br>
-			<%= @user.introduction %>
-			<br>
-			<%= attachment_image_tag @user, :profile_image, :fill, 300, 300, fallback: "no_image.png", size:'300x300' %>
 		</span>
+		<span class="user_name"><%= @user.name %></span>
+		<br>
+		<span class="user_introduction"><%= @user.introduction %></span>
+		<br>
+		<% if @user != current_user %>
+			<%= render 'users/follow', user: @user %>
+		<% else %>
+			<%= link_to "Edit Profile", edit_user_path(@user) %>
+			<br>
+			<%= link_to "Sell Item", new_item_path %>
+		<% end %>
 	</section>
-	<h1>出品商品一覧</h1>
-	<% @user.items.each do |item| %>
-		<%= render 'items/index', item: item %>
-	<% end %>
+	<section class="user_items">
+		<% @user.items.each do |item| %>
+			<div class="item_box">
+				<%= render 'items/index', item: item %>
+			</div>
+		<% end %>
+	</section>
 </main>

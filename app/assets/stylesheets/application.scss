@@ -24,9 +24,21 @@
 	margin: 0;
 }
 
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: block;
+}
+
 body{
 	font-family: Impact;
 	color: #090909;
+	a{
+		color: #090909;
+		&:hover{
+			text-decoration: none;
+		}
+	}
 }
 
 .header{
@@ -75,6 +87,33 @@ body{
 .mypage{
 	margin: 0 auto;
 	width: 95%;
-	.profile{
+	.user_profile{
+		float: left;
+		width: 40%;
+		.user_image{
+			border: 5px solid black;
+			border-radius: 50%;
+		}
+		.user_name{
+			font-size: 30px;
+		}
+		.user_introduction{
+			font-size: 18px;
+		}
+	}
+	.user_items{
+		float: left;
+		width: 60%;
+		.item_box{
+			float: left;
+			margin-right: 10px;
+			.item_image{
+				border: 5px solid black;
+				height: 250px;
+			}
+			.item_title{
+				font-size: 20px;
+			}
+		}
 	}
 }
