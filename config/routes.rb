@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
 	resources :items
 
+	post '/item/favorite/:item_id/' => 'favorites#create', as: 'create_favorite'
+	delete '/item/favorite/:item_id/' => 'favorites#destroy', as: 'destroy_favorite'
+
   	root to: 'top#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

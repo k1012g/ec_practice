@@ -6,4 +6,8 @@ class Item < ApplicationRecord
 	has_many :favorites
 
 	attachment :item_image
+
+	def favorited_by?(user)
+        favorites.where(user_id: user.id).exists?
+    end
 end

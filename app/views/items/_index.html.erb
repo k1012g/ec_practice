@@ -8,3 +8,6 @@
 
 <%= link_to "Delete", item_path(item.id), data: { confirm: "#{item.title} Delete?" }, method: :delete %>
 <br>
+<span id="favorites_<%= item.id %>">
+	<%= render 'favorites/fav', item: item %>
+</span>
