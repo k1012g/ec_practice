@@ -120,9 +120,40 @@ body{
 				right: 10px;
 				position: absolute;
 			}
-			.item_delete{
-				color: red;
-			}
 		}
 	}
+}
+
+.item_delete{
+	color: red;
+}
+
+.item_page{
+	margin: 10px auto;
+	width: 70%;
+	.item_image{
+		float: left;
+		height: 500px;
+		width: 40%;
+		.item_image_inner{
+			border: 5px solid black;
+			height: 400px;
+			width: auto;
+		}
+	}
+	.item_info{
+		float: left;
+		height: 500px;
+		margin-left: 7%;
+		width: 53%;
+		strong{
+			font-size: 20px;
+		}
+	}
+}
+.item_body{
+	border: 5px solid black;
+	height: 500px;
+	margin: 0px auto 50px auto;
+	width: 70%;
 }
