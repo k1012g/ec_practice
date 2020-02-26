@@ -1,8 +1,14 @@
 <% if signed_in? %>
 	<% if item.favorited_by?(current_user) %>
-		<%= link_to "いいね中", destroy_favorite_path(item.id), method: :delete, remote: true %>
+		<%= link_to destroy_favorite_path(item.id), method: :delete, remote: true do %>
+			<%= icon 'fas', 'heart', style: "color: red;"%>
+			<%= item.favorites.count %>
+		<% end %>
 	<% else %>
-		<%= link_to "いいねする", create_favorite_path(item.id), method: :post, remote: true %>
+		<%= link_to create_favorite_path(item.id), method: :post, remote: true do %>
+			<%= icon 'far', 'heart', style: "color: red;"  %>
+			<%= item.favorites.count %>
+		<% end %>
 	<% end %>
 <% else %>
 	ログインしてない

@@ -107,12 +107,21 @@ body{
 		.item_box{
 			float: left;
 			margin-right: 10px;
+			position: relative;
 			.item_image{
 				border: 5px solid black;
 				height: 250px;
 			}
 			.item_title{
 				font-size: 20px;
+			}
+			.item_fav{
+				bottom: 10px;
+				right: 10px;
+				position: absolute;
+			}
+			.item_delete{
+				color: red;
 			}
 		}
 	}
