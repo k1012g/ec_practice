@@ -6,8 +6,8 @@
 <span class="item_title">¥<%= item.price %></span>
 <br>
 
-<%= link_to "Delete", item_path(item.id), data: { confirm: "#{item.title} Delete?" }, method: :delete %>
+<%= link_to "Delete", item_path(item.id), data: { confirm: "#{item.title} Delete?" }, method: :delete, class: "item_delete" %>
 <br>
-<span id="favorites_<%= item.id %>">
+<span id="favorites_<%= item.id %>" class="item_fav">
 	<%= render 'favorites/fav', item: item %>
 </span>
