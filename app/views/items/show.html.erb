@@ -1,36 +1,38 @@
-<%= attachment_image_tag @item, :item_image, :fill, 300, 300 %>
-<br>
+<main class="item_page clearfix">
+	<div class="item_image">
+		<%= attachment_image_tag @item, :item_image, :fill, 300, 300, class: "item_image_inner" %>
+	</div>
+	<div class="item_info">
+		<strong><%= @item.title %></strong>
+		<hr>
 
-<strong>商品名</strong>
-<br>
-<%= @item.title %>
-<br>
+		<strong>
+			Brand :
+			<%= @item_brand %>
+		</strong>
+		<hr>
 
-<strong>ブランド名</strong>
-<br>
-<%= @item_brand %>
-<br>
+		<strong>
+			Size :
+			<%= @item.size %>
+		</strong>
+		<hr>
 
-<strong>サイズ</strong>
-<br>
-<%= @item.size %>
-<br>
+		<strong>
+			Category :
+			<%= @item_category %>
+		</strong>
+		<hr>
 
-<strong>カテゴリー</strong>
-<br>
-<%= @item_category %>
-<br>
+		<strong>¥<%= @item.price %></strong>
+		<hr>
 
-<strong>商品説明</strong>
-<br>
-<%= @item.body %>
-<br>
-
-<strong>価格</strong>
-<br>
-<%= @item.price %>円
-<br>
-
-<% if current_user = @item.user %>
-	<%= link_to "編集", edit_item_path(@item) %>
-<% end %>
+		<% if current_user = @item.user %>
+			<%= link_to "Edit", edit_item_path(@item) %>
+			<%= link_to "Delete", item_path(@item), data: { confirm: "#{@item.title} Delete?" }, method: :delete, class: "item_delete" %>
+		<% end %>
+	</div>
+</main>
+<section class="item_body">
+	出品者情報と商品の説明文
+</section>
