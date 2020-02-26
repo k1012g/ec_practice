@@ -1,0 +1,9 @@
+<% if signed_in? %>
+	<% if item.favorited_by?(current_user) %>
+		<%= link_to "いいね中", destroy_favorite_path(item.id), method: :delete, remote: true %>
+	<% else %>
+		<%= link_to "いいねする", create_favorite_path(item.id), method: :post, remote: true %>
+	<% end %>
+<% else %>
+	ログインしてない
+<% end %>
