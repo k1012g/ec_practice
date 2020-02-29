@@ -152,8 +152,28 @@ body{
 	}
 }
 .item_body{
-	border: 5px solid black;
-	height: 500px;
 	margin: 0px auto 50px auto;
 	width: 70%;
+	div{
+		height: 500px;
+	}
+	.item_user_info{
+		float: left;
+		font-size: 20px;
+		text-align: center;
+		width: 30%;
+		.user_image{
+			border: 5px solid black;
+			border-radius: 50%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.item_body_inner{
+		border: 5px solid black;
+		float: left;
+		font-size: 20px;
+		padding: 10px;
+		width: 70%;
+	}
 }
