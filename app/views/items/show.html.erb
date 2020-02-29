@@ -3,7 +3,9 @@
 		<%= attachment_image_tag @item, :item_image, :fill, 300, 300, class: "item_image_inner" %>
 	</div>
 	<div class="item_info">
-		<strong><%= @item.title %></strong>
+		<strong>
+			<%= @item.title %>
+		</strong>
 		<hr>
 
 		<strong>
@@ -33,6 +35,18 @@
 		<% end %>
 	</div>
 </main>
-<section class="item_body">
-	出品者情報と商品の説明文
+<section class="item_body clearfix">
+	<div class="item_user_info">
+		<h3>Seller</h3>
+		<%= attachment_image_tag @item.user, :profile_image, :fill, 270, 270, fallback: "no_image.jpg", size:'270x270', class: "user_image" %>
+		<br>
+		<%= @item.user.name %>
+		<br>
+		<%= link_to user_path(@item.user) do %>
+			<%= @item.user.items.count %> Items
+		<% end %>
+	</div>
+	<div class="item_body_inner">
+		<%= @item.body %>
+	</div>
 </section>
