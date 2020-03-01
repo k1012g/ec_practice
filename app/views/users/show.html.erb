@@ -12,7 +12,9 @@
 		<span class="user_introduction"><%= @user.introduction %></span>
 		<br>
 		<% if @user != current_user %>
-			<%= render 'users/follow', user: @user %>
+			<span id="follow_<%= @user.id %>">
+				<%= render 'users/follow', user: @user %>
+			</span>
 		<% else %>
 			<%= link_to "Edit Profile", edit_user_path(@user) %>
 			<br>

@@ -42,8 +42,13 @@ class ItemsController < ApplicationController
   	redirect_to user_path(current_user.id)
   end
 
+  def buy
+    Item.find(params[:id]).update(sales_status: 1)
+    redirect_to root_path
+  end
+
   private
   def item_params
-  	params.require(:item).permit(:price, :item_image, :body, :title, :user_id, :size, :brand_id, :category_id)
+  	params.require(:item).permit(:price, :item_image, :body, :title, :user_id, :size, :brand_id, :category_id, :sales_status)
   end
 end
