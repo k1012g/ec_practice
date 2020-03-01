@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
 	resources :items
 
+	post '/buy/:id/' => 'items#buy', as: 'buy_item'
+
 	post '/item/favorite/:item_id/' => 'favorites#create', as: 'create_favorite'
 	delete '/item/favorite/:item_id/' => 'favorites#destroy', as: 'destroy_favorite'
 
