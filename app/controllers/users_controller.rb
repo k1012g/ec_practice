@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@buy_item = Item.where(sales_status: params[:id])
 	end
 
 	def edit
