@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    Item.find(params[:id]).update(sales_status: 1)
+    Item.find(params[:id]).update(sales_status: current_user.id)
     redirect_to root_path
   end
 

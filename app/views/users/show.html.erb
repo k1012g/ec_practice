@@ -25,4 +25,11 @@
 			</div>
 		<% end %>
 	</section>
+	<section>
+		<% @buy_item.each do |item| %>
+			<div class="item_box">
+				<%= render 'items/index', item: item %>
+			</div>
+		<% end %>
+	</section>
 </main>
