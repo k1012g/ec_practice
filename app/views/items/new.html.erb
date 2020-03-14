@@ -1,5 +1,7 @@
-<h1>出品ページ</h1>
+<strong class="text-center" style="font-size: 40px;">
+	Sell New Item
+</strong>
 <%= form_with(model: @item, local: true) do |f| %>
 	<%= render 'items/form', item: @item, f: f %>
-	<%= f.submit "出品する" %>
+	<%= f.submit "Sell New Item", class: "sell_input" %>
 <% end %>

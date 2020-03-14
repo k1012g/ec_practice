@@ -1,28 +1,37 @@
-<strong>商品画像</strong><br>
-<%= attachment_image_tag item, :item_image, :fill, 300, 300, fallback: "item_no_image.png", size:'300x300', id: "img" %>
-<%= f.attachment_field :item_image, id: "file" %>
-<br>
+<main class="item_edit clearfix">
 
-<strong>商品カテゴリー</strong><br>
-<%= f.collection_select(:category_id, Category.all, :id, :name) %>
-<br>
+	<div class="left">
+		<strong>Image</strong>
+		<br>
+		<%= attachment_image_tag item, :item_image, :fill, 300, 300, fallback: "item_no_image.png", size:'300x300', id: "img", class: "item_image" %>
+		<%= f.attachment_field :item_image, id: "file" %>
+	</div>
 
-<strong>ブランド</strong><br>
-<%= f.collection_select(:brand_id, Brand.all, :id, :name) %>
-<br>
+	<div class="right">
+		<strong>Category</strong><br>
+		<%= f.collection_select(:category_id, Category.all, :id, :name) %>
+		<br>
 
-<strong>商品名</strong><br>
-<%= f.text_field :title %>
-<br>
+		<strong>Brand</strong><br>
+		<%= f.collection_select(:brand_id, Brand.all, :id, :name) %>
+		<br>
 
-<strong>商品説明</strong><br>
-<%= f.text_area :body %>
-<br>
+		<strong>Name</strong><br>
+		<%= f.text_field :title %>
+		<br>
 
-<strong>サイズ</strong><br>
-<%= f.text_field :size %>
-<br>
+		<strong>Size</strong><br>
+		<%= f.text_field :size %>
+		<br>
 
-<strong>商品価格</strong><br>
-<%= f.text_field :price %>
-<br>
+		<strong>Price</strong><br>
+		¥<%= f.text_field :price %>
+		<br>
+	</div>
+
+	<div class="bottom">
+		<strong>Body</strong><br>
+		<%= f.text_area :body %>
+		<br>
+	</div>
+</main>
