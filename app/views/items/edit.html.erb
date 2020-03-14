@@ -1,4 +1,4 @@
-<h1>出品物編集ページ</h1>
+<strong class="text-center">出品物編集ページ</strong>
 <%= form_with(model: @item, local: true) do |f| %>
 	<%= render 'items/form', item: @item, f: f %>
 	<%= f.submit "更新する" %>

@@ -189,3 +189,37 @@ body{
 		width: 300px;
 	}
 }
+
+.item_edit{
+	margin: 0 auto;
+	width: 50%;
+	strong{
+		font-size: 25px;
+	}
+	.item_image{
+		border: 5px solid black;
+	}
+	div{
+		float: left;
+	}
+	.right{
+		padding-left: 50px;
+	}
+	.bottom{
+		margin-top: 70px;
+		width: 100%;
+		#item_body{
+			border: 5px solid black;
+			margin: 0 auto;
+			height: 400px;
+			width: 100%;
+		}
+	}
+}
+
+.sell_input{
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	width: 30%;
+}
